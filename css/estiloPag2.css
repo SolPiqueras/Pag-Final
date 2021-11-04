@@ -1,0 +1,139 @@
+@font-face {
+    font-family:themillion;
+    src: url("../imagenes/Minecraft.ttf");
+}
+h2 {
+    font-family:themillion;
+}
+
+body{
+    background-image: url("../imagenes/asd.jpeg");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+
+div{
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+h3{
+    color: white;
+    margin: 0;
+    font-size: 15px;
+}
+
+#boton{
+    background: #020202;
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+}
+
+.contenedor {
+    margin: 200px auto;
+    display: table;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 251, 0);
+}
+h1{
+    float: left;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.GIF {
+    margin: -180px;
+    display: center;
+}
+
+h1 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-left: 2px solid rgba(255, 255, 255, 0.9);
+
+    animation: maquina 5s infinite alternate steps(40);
+}
+
+@keyframes maquina {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+.container span{
+    font-size: 25pt;
+    font-weight: bold;
+    position: center;
+    font-family:themillion;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.container span::before{
+    content: var(--l);
+    position: center;
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+.container span::after{
+    content: var(--l);
+    position: center;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.container span:hover{
+    filter:contrast(250%)
+}
+.container span:nth-child(1){
+ color: #f30d52;
+}
+.container span:nth-child(2){
+    color: rgb(241, 2, 2); ;
+ }
+.container span:nth-child(3){
+   color: #1907be;
+ }
+ .container span:nth-child(4){
+    color: #0bce2c;
+ }
+.container span:nth-child(5){
+    color: #ecdd0c;
+}
+ .container span:nth-child(6){
+    color: #f06408;
+}
+.container span:nth-child(7){
+    color: #8b00c2;
+ }
+.container span:nth-child(8){
+    color:#f113c1 ;
+}

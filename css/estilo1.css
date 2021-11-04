@@ -1,0 +1,236 @@
+@font-face {
+    font-family:themillion;
+    src: url(Minecraft.ttf);
+}
+.logo {
+    font-family:themillion;
+}
+body{
+    margin-top: 20rem;
+    font-family: georgia, times, serif;
+    color:#333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    margin:0;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+    background: url(Arcade5.jpg);   
+    background-size: cover;
+    background-position: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.galeria{
+    font-family:themillion;
+    color: rgb(19, 2, 2);
+}
+
+.contenedor-imagenes{
+    display: flex;
+    width: 85%;
+    margin:auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+.contenedor-imagenes .imagen{
+    width:32% ;
+    position:relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .75);
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(187, 73, 218, 0.384);
+    width:100%;
+    height: 0;
+    transition: .5s ease;
+    overflow: hidden;
+    color:white;
+}
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.overlay h2  {
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.overlay h4  {
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+h1{
+    font-size: 2rem;
+    line-height:1.3em;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.container{
+    width:85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.header {
+    
+    background:rgb(0, 0, 0) ;
+    color:white;
+    padding: 2rem;
+    position: static;
+    left:0;
+    top:0;
+    right: 0;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+}
+.logo-nav-conteiner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family:themillion;
+}
+.logo{
+    letter-spacing: 5px;
+    font-size: 1.3em;
+}
+.main{
+    padding-top: 10rem;
+}
+.menu-icon{
+    display: none;
+}
+.navegation ul {
+    margin:0;
+    padding: 0;
+    list-style: none;
+    letter-spacing: 1.5px;
+    font-size: 0.8em
+
+}
+.navegation ul li{
+    display: inline-block;
+}
+.navegation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+    border-radius: 2.5px;
+}
+.navegation ul li a:hover{
+    background: rgb(119, 118, 118);
+}
+.footer{
+    background: rgb(0, 0, 0);
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(253, 253, 253);
+   
+
+}
+@media only screen and (max-width:767px ){
+    .menu-icon{
+     display: block;
+     cursor: pointer;
+     padding: 0.5rem 1rem;
+     letter-spacing: 1.5px;
+     font-size: 0.8em
+    }
+    .navegation ul {
+        display: none;
+    }
+    .navegation ul.show {
+        display: block;
+    }
+    .navegation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    
+    .navegation ul li {
+    display: block;
+    }
+    .navegation ul li a  {
+     display: block;
+    padding: 0.5rem 0;
+    transition: all 0.4s linear;
+     border-radius: 5px;
+    }
+    .navegation ul li a:hover{
+     background: #666262; ;
+     }
+    }
+@media only screen and (max-width:1000px ){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+@media  screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+    
+}
+@media  screen and (max-width:450px){
+    h1{
+        font-size: 22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+    
+}
+
+
+    
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+

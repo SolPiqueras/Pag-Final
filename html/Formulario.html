@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="../css/estilosFrom.css">
+</head>
+<body>
+	<main>
+		<form class="formulario" id="formulario">
+			<div class="titulo"><h3>Datos personales</h3></div>
+			<!--Nombre-->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label  for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El nombre no puede contener caracteres especiales ni más de 40 letras</p>
+			</div>
+					
+
+			<!--Apellido-->
+			<div class="formulario__grupo" id="grupo__apellido">
+				<label  for="apellido" class="formulario__label">Apellido</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="apellido" id="apellido">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El apellido no puede contener caracteres especiales ni más de 40 letras</p>
+			</div>
+
+
+			<!--DNI-->
+			<div class="formulario__grupo" id="grupo__dni">
+				<label  for="dni" class="formulario__label">DNI</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="dni" id="dni">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El dni sólo puede contener 8 dígitos</p>
+			</div>
+
+
+			<!--Fecha de Nacimiento-->
+			<div class="formulario__grupo" id="grupo__fecha">
+				<label  for="fecha" class="formulario__label">Fecha de Nacimiento</label>
+				<div class="formulario__grupo-input">
+					<input type="date" class="formulario__input" name="fecha" id="fecha" onfocusout="calcularEdad()">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Es necesario ser mayor de edad para completar el formulario</p>
+			</div>
+			
+
+			<!--Correo-->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label  for="correo" class="formulario__label">Correo</label>
+				<div class="formulario__grupo-input">
+					<input type="mail" class="formulario__input" name="correo" id="correo" placeholder="ejemplo@correo.com">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El formato de correo no es váliddo</p>
+			</div>
+
+			<!--Teléfono-->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label  for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">El teléfono debe tener entre 10 y 13 números</p>
+			</div>
+
+			<!--Estudios-->
+			<div class="formulario__grupo" id="grupo__estudios">
+				<label  for="estudios" class="formulario__label">Estudios</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="estudios" id="estudios">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+			<!--Puesto postulado-->
+			<div class="formulario__grupo" id="grupo__puesto">
+				<label  for="puesto" class="formulario__label">Puesto postulado</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="puesto" id="puesto">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<div class="titulo"><h3>Domicilio</h3></div>
+
+			<!--Provincia
+			<div class="formulario__grupo" id="grupo__provincia">
+				<label  for="provincia" class="formulario__label">Provincia</label>
+				<div class="formulario__grupo-input">
+					<select name="provincia" class="formulario__select">
+						<option></option>
+						<option>Buenos Aires</option>
+						<option>Catamarca</option>
+						<option>Chaco</option>
+						<option>Chubut</option>
+						<option>Corrientes</option>
+						<option>Córdoba</option>
+						<option>Entre Ríos</option>
+						<option>Formosa </option>
+						<option>Jujuy</option>
+						<option>La Pampa</option>
+						<option>La Rioja</option>
+						<option>Mendoza</option>
+						<option>Misiones</option>
+						<option>Neuquén</option>
+						<option>Río Negro</option>
+						<option>Salta</option>
+						<option>San Juan</option>
+						<option>San Luis</option>
+						<option>Santa Cruz</option>
+						<option>Santa Fe </option>
+						<option>Santiago del Estero</option>
+						<option>Tierra del Fuego</option>
+						<option>Tucumán</option>
+						<option>CABA</option>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>-->
+
+			<!--Provincia version texto-->
+			<div class="formulario__grupo" id="grupo__provincia">
+				<label  for="provincia" class="formulario__label">Provincia</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="provincia" id="provincia">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Ciudad-->
+			<div class="formulario__grupo" id="grupo__ciudad">
+				<label  for="ciudad" class="formulario__label">Ciudad</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="ciudad" id="ciudad">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Calle-->
+			<div class="formulario__grupo" id="grupo__calle">
+				<label  for="calle" class="formulario__label">Calle</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="calle" id="calle">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Número-->
+			<div class="formulario__grupo" id="grupo__numero">
+				<label  for="numero" class="formulario__label">Número</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="numero" id="numero">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Piso-->
+			<div class="formulario__grupo" id="grupo__piso">
+				<label  for="piso" class="formulario__label">Piso/Departamento</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="piso" id="piso">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Codigo postal-->
+			<div class="formulario__grupo" id="grupo__codigo">
+				<label  for="codigo" class="formulario__label">Código Postal</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="codigo" id="codigo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<div class="titulo"><h3>Disponibilidad Horaria</h3></div>
+
+			<!--Desde-->
+			<div class="formulario__grupo" id="grupo__desde">
+				<label  for="desde" class="formulario__label">Desde</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="desde" id="desde">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<!--Hasta-->
+			<div class="formulario__grupo" id="grupo__hasta">
+				<label  for="hasta" class="formulario__label">Hasta</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="hasta" id="hasta">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+			<div class="titulo"><h3>Carta de presentación</h3></div>
+
+			<!--Carta de presentación-->
+			<div class="formulario__grupo" id="grupo__carta">
+				<div class="formulario__grupo-input">
+					<div class="formulario__textarea">
+						<textarea name="carta" id="carta" cols="25" rows="10"></textarea>
+					</div>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error"></p>
+			</div>
+
+		<div class="formulario__mensaje" id="formulario__mensaje">
+			<p><i class="fas fa-exclamation-triangle"></i><b>Error: </b> Debe rellenar los campos obligatorios</p>
+		</div>
+
+		<div class= "formulario__grupo formulario__grupo-btn-enviar">
+			<button type="submit" class="formulario__btn">Enviar</button>
+			<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con exito!</p>
+		</div>
+	</form>
+	</main>
+
+	<script src="../scripts/formulario.js"></script>
+	<scrip src="../scripts/CantCaracteres.js"></scrip>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
